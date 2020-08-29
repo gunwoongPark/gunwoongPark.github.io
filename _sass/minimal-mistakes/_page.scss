@@ -14,8 +14,9 @@
   -webkit-animation-delay: 0.15s;
   animation-delay: 0.15s;
 
+  // 좌우 너비 제한 변경
+
   @include breakpoint($x-large) {
-    max-width: $max-width;
   }
 }
 
@@ -44,6 +45,7 @@ body {
 
   @include breakpoint($x-large) {
     width: calc(100% - #{$right-sidebar-width});
+    // 게시물 본문 우측 패딩 삭제
     padding-right: $right-sidebar-width;
   }
 
@@ -518,6 +520,8 @@ body {
 
   @include breakpoint($x-large) {
     width: calc(100% - #{$right-sidebar-width});
+    // 본문의 우측 패딩에 맞춤
+    padding-right:300px;
   }
 
   a {
