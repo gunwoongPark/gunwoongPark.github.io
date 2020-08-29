@@ -25,8 +25,9 @@
     justify-content: space-between;
     font-family: $sans-serif-narrow;
 
+    // 좌우 너비 제한 해제 (만카이)
     @include breakpoint($x-large) {
-      max-width: $max-width;
+
     }
 
     nav {
