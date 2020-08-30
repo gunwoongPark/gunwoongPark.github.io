@@ -14,7 +14,7 @@ comments: true
 
 이번 셈틀꾼 홈페이지에도 상당히 유용하게 쓰일 것으로 보이며 이 버튼 구현을 내가 도맡았다.
 
-# TopBtn.vue
+# 주요코드
 
 ```vue
 <template>
