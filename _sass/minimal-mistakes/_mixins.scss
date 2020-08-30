@@ -45,6 +45,9 @@
 @mixin clearfix {
   clear: both;
 
+  // 불편한 구분선 제거
+  border-top: none !important;
+
   &::after {
     clear: both;
     content: "";
