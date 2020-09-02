@@ -242,6 +242,110 @@ clickTd();
 clock();
 ```
 
+```html
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Calender</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+    <script src="./main.js" defer></script>
+</head>
+
+<body>
+    <div class="container mt-3">
+        <div class="row align-items-center">
+            <div class="col-md-2"></div>
+            <div class="col-md-1">
+                <img src="./image/left.png" width="45px" id="beforeBtn">
+            </div>
+            <div class="col-md-6">
+                <h1 id="yearMonth"></h1>
+            </div>
+            <div class="col-md-1">
+                <img src="./image/right.png" width="45px" id="afterBtn">
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <table id="calender">
+                    <thead id="dayOfTheWeek">
+                        <th style="color: red;">일</td>
+                        <th>월</td>
+                        <th>화</td>
+                        <th>수</td>
+                        <th>목</td>
+                        <th>금</td>
+                        <th style="color: blue;">토</td>
+                    </thead>
+                    <tbody id="calTable"></tbody>
+                </table>
+                <div>
+                    <h1 id="day"></h1>
+                </div>
+                <br />
+                <div>
+                    <h1 id="time"></h1>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
+```
+
+```css
+body{
+    text-align: center;
+    overflow: auto;
+}
+
+#calender{
+    margin:auto;
+}
+
+table tr td{
+    font-size: 35px;
+    padding: 20px;
+    border-radius: 25%;
+}
+
+th{
+    font-size: 30px;
+}
+
+.img-button-left{
+    background: url("./image//left.png");
+}
+
+#afterBtn:hover{
+    cursor: pointer;
+}
+
+#beforeBtn:hover{
+    cursor: pointer;
+}
+
+.clcikableTd:hover{
+    cursor: pointer;
+    background-color: yellow;
+}
+
+.container{
+    border: black solid 2px;
+
+    width: 720px;
+}
+```
+
 테마는 할머니집에 있는 시골 달력이다.
 
 달력을 코딩한다면 가장 먼저 생각나는 기법 중 하나인 table 태그를 활용했다.
