@@ -78,18 +78,18 @@ export default {
 <template>
   <v-row>
     <v-col cols="12">
-      <h1>{{noticeHeader.title}}</h1>
+      <h1>{% raw %}{{noticeHeader.title}}{% endraw %}</h1>
       <hr />
       <table>
         <tr>
           <td rowspan="2">
             <img :src="noticeHeader.writerImage" width="50px" />
           </td>
-          <td style="vertical-align:top;">작성자:{{noticeHeader.writerName}}</td>
+          <td style="vertical-align:top;">작성자:{% raw %}{{noticeHeader.writerName}}{% endraw %}</td>
         </tr>
         <tr style="vertical-align:bottom;">
-          <td>작성일:{{noticeHeader.date}}</td>
-          <td>|조회수:{{noticeHeader.views}}</td>
+          <td>작성일:{% raw %}{{noticeHeader.date}}{% endraw %}</td>
+          <td>|조회수:{% raw %}{{noticeHeader.views}}{% endraw %}</td>
         </tr>
       </table>
     </v-col>
@@ -129,7 +129,7 @@ hr {
 <template>
   <v-row>
     <v-col cols="12">
-      <VueMarkDown>{{noticeBody.mdText}}</VueMarkDown>
+      <VueMarkDown>{% raw %}{{noticeBody.mdText}}{% endraw %}</VueMarkDown>
       <img :src="noticeBody.imagePath" alt="Lena" width="300px" />
     </v-col>
   </v-row>
@@ -174,7 +174,7 @@ import VueMarkDown from "vue-markdown";
 이 후 다른 컴포넌트를 사용하듯 사용하면 된다.
 
 ```vue
-<VueMarkDown>{{noticeBody.mdText}}</VueMarkDown>
+<VueMarkDown>{% raw %}{{noticeBody.mdText}}{% endraw %}</VueMarkDown>
 ```
 
 ## Result

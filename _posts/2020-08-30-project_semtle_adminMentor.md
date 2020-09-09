@@ -58,7 +58,7 @@ comments: true
                 </template>
                 <v-card>
                   <v-card-title>
-                    <span class="headline">{{formTitle}}</span>
+                    <span class="headline">{% raw %}{{formTitle}}{% endraw %}</span>
                   </v-card-title>
 
                   <v-card-text>

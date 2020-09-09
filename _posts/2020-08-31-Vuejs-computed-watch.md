@@ -85,8 +85,8 @@ watch: {
 <body>
 
     <div id="app">
-        <div>{{msg}}</div>
-        <div>{{reversedMsg}}</div>
+        <div>{% raw %}{{msg}}{% endraw %}</div>
+        <div>{% raw %}{{reversedMsg}}{% endraw %}</div>
     </div>
 
     <script>

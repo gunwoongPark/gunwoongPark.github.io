@@ -327,7 +327,7 @@ export default {
           v-on="on"
           @click="Attribute.method"
         >
-        {{Attribute.Title}}
+        {% raw %}{{Attribute.Title}}{% endraw %}
         </v-btn>
       </router-link>
     </template>
@@ -345,7 +345,7 @@ export default {
             functions.menuClose();  
           }">
             <v-list-item-title>
-              {{ item.title }}
+              {% raw %}{{ item.title }}{% endraw %}
             </v-list-item-title>
           </v-list-item>
         </router-link>

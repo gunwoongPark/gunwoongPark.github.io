@@ -38,7 +38,7 @@ comments: true
                                 <v-alert outlined color="#365164">
                                     <v-row class="py-0">
                                         <v-col cols="12" class="py-0">
-                                            <v-card-title class="font-weight-black">{{title}}</v-card-title>
+                                            <v-card-title class="font-weight-black">{% raw %}{{title}}{% endraw %}</v-card-title>
                                         </v-col>
                                         <v-col class="text-right" cols="12" v-show="admin">
                                             <v-btn color="error" @click="deleteNotice">삭제</v-btn>
@@ -47,14 +47,14 @@ comments: true
                                     <v-divider class="mb-2"></v-divider>
                                     <ul class="noticeInfo">
                                         <li>
-                                            <b>작성자</b>{{writer}}
+                                            <b>작성자</b>{% raw %}{{writer}}{% endraw %}
                                         </li>
                                         <li>
-                                            <b>작성일</b>{{date}}
+                                            <b>작성일</b>{% raw %}{{date}}{% endraw %}
                                         </li>
 
                                         <li>
-                                            <v-icon small>mdi-eye</v-icon>{{views}}
+                                            <v-icon small>mdi-eye</v-icon>{% raw %}{{views}}{% endraw %}
                                         </li>
                                     </ul>
                                     <v-card-text style="color: #000;">

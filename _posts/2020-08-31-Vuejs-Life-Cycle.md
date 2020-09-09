@@ -82,7 +82,7 @@ Vue 인스턴스가 소멸된 후 실행되는 라이프 사이클이다.
 
 <body>
     <div id="app">
-        <div ref="msg">{{msg}}</div>
+        <div ref="msg">{% raw %}{{msg}}{% endraw %}</div>
         <div ref="div"></div>
     </div>
 

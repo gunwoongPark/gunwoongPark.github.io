@@ -56,7 +56,7 @@ comments: true
     <v-row>
         <v-col cols="12">
             <v-data-table :headers="headers" :items="projects" :items-per-page="5" @click:row="clickRow">
-                <template v-slot:header.name="{ header }">{{ header.text.toUpperCase() }}</template>
+                <template v-slot:header.name="{ header }">{% raw %}{{ header.text.toUpperCase() }}{% endraw %}</template>
             </v-data-table>
         </v-col>
     </v-row>
@@ -280,7 +280,7 @@ export default {
         <template v-slot:activator="{on, attrs}">
             <v-card height="200" light="light" class="pa-5">
                 <v-card-title primary="primary" class="com-title justify-center">전화번호</v-card-title>
-                <v-card-text class="show text-center">{{outputPhonenum}}</v-card-text>
+                <v-card-text class="show text-center">{% raw %}{{outputPhonenum}}{% endraw %}</v-card-text>
                 <v-card-actions class="justify-center">
                     <v-btn color="rgb(80, 130, 155)" v-bind="attrs" v-on="on" dark="dark" class="btn btn-dark m-3" @click="openDialog">변경</v-btn>
                 </v-card-actions>
@@ -319,7 +319,7 @@ export default {
                 <p style="color:white !important;">Error</p>
             </v-card-title>
             <ul class="mt-5">
-                <li v-for="(error,i) in errMsg" :key="i">{{error}}</li>
+                <li v-for="(error,i) in errMsg" :key="i">{% raw %}{{error}}{% endraw %}</li>
             </ul>
             <v-card-actions>
                 <v-spacer></v-spacer>
@@ -452,7 +452,7 @@ li {
 <div>
     <v-card height="200" light="light" class="pa-5">
         <v-card-title primary="primary" class="com-title justify-center">학번+이름</v-card-title>
-        <v-card-text class="show mt-4 text-center">{{outputNick}}</v-card-text>
+        <v-card-text class="show mt-4 text-center">{% raw %}{{outputNick}}{% endraw %}</v-card-text>
     </v-card>
 </div>
 </template>
@@ -548,7 +548,7 @@ export default {
                 <p style="color:white !important;">Error</p>
             </v-card-title>
             <ul class="mt-5">
-                <li v-for="(error,i) in errMsg" :key="i">{{error}}</li>
+                <li v-for="(error,i) in errMsg" :key="i">{% raw %}{{error}}{% endraw %}</li>
             </ul>
             <v-card-actions>
                 <v-spacer></v-spacer>
